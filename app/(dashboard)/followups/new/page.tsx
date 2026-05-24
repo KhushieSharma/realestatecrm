@@ -148,6 +148,22 @@ export default async function NewFollowUpPage() {
     );
   }
 
+  if (error) {
+    return (
+      <div className="bg-red-50 border-l-4 border-red-400 text-red-700 p-4 mb-6">
+        <p className="font-medium">{error}</p>
+      </div>
+    );
+  }
+
+  if (success) {
+    return (
+      <div className="bg-green-50 border-l-4 border-green-400 text-green-700 p-4 mb-6">
+        <p className="font-medium">{success}</p>
+      </div>
+    );
+  }
+
   const pageTitle = isTemplateMode ? 'Create Follow-up Template' : 'Schedule Follow-up';
   const submitButtonText = isTemplateMode ? 'Save Template' : 'Schedule Follow-up';
 
@@ -206,8 +222,9 @@ export default async function NewFollowUpPage() {
                   </div>
                 )}
               </div>
-            </>
+            </div>
           )}
+        )
 
         {/* Follow-up Type */}
         <div>
@@ -310,7 +327,7 @@ export default async function NewFollowUpPage() {
                   </div>
                 ))}
               </div>
-            </>
+            </div>
           )
         )}
 

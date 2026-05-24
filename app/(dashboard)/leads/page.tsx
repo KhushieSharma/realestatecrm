@@ -279,7 +279,7 @@ export default async function LeadsPage() {
                       {lead.preferred_location && <p className="text-xs text-gray-500">{lead.preferred_location}</p>}
                       {lead.budget_min !== null && lead.budget_max !== null && (
                         <p className="text-xs text-gray-500">
-                          Budget: ${lead.budget_min.toLocaleString()} - ${lead.budget_max.toLocaleString()}
+                          Budget: {lead.budget_min.toLocaleString()} - {lead.budget_max.toLocaleString()}
                         )
                       )}
                     </div>

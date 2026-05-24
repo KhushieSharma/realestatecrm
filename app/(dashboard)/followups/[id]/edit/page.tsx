@@ -500,10 +500,9 @@ export default async function FollowUpEditPage({
                     {template.body}
                   </p>
                 </div>
-              ))}
+              ))
             </div>
-          </>
-        )}
+          }
 
         {/* Submit Button */}
         <div className="flex items-center justify-between">
